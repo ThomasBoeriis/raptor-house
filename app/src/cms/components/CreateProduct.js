@@ -2,8 +2,15 @@ import React, { useState, useEffect } from "react";
 
 import { getAll, post } from "../../context/Context";
 
+//History
+import { useHistory } from "react-router-dom";
+
+
+
 //DeStructing
 const CreateProduct = ({ setState }) => {
+
+    let history = useHistory();
 
     const [product, setProduct] = useState();
     const [categories, setCategories] = useState();
@@ -42,6 +49,8 @@ const CreateProduct = ({ setState }) => {
                 ...prevState,
                 res
             ]));
+
+            history.push("/cms/products");
         });
     }
     return (

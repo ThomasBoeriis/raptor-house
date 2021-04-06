@@ -2,8 +2,12 @@ import React, { useState, useEffect } from "react";
 
 import { getAll, put, get } from "../../context/Context";
 
+//History
+import { useHistory } from "react-router-dom";
 
 const EditProduct = ({ products, setState, id }) => {
+
+    let history = useHistory();
 
     const [product, setProduct] = useState();
     const [categories, setCategories] = useState();
@@ -48,6 +52,8 @@ const EditProduct = ({ products, setState, id }) => {
 
             copyList[indexToEdit] = product;
             setState(copyList);
+
+            history.push("/cms/products");
         });
     }
     return (
