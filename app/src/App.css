@@ -1,0 +1,23 @@
+h1,h2,h3,h4,h5 {
+    font-family: 'Ranchers';
+}
+
+
+body {
+    background-color: #212121;
+}
+
+nav ul {
+    list-style:none;
+    display:flex;
+    list-style: square;
+    margin:0;
+}
+nav ul li {
+    min-width: 75px;
+    color:#fff;
+}
+
+.whiteBorder {
+    border: 10px solid white
+}
