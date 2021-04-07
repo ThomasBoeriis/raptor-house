@@ -21,8 +21,6 @@ const Login = () => {
 
     const handleLogin = (event) => {
         event.preventDefault();
-        console.log(user);
-
         post("users/validate", user).then(res => {
             if (res?.id) {
                 localStorage.setItem("user", JSON.stringify(res));

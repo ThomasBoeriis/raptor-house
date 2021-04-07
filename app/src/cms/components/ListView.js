@@ -16,7 +16,7 @@ const ListView = ({ items, title, setState }) => {
         if(confirm) {
             del(title, id).then(res =>  {
                 setState(prevState => ([
-                    ...prevState.filter(item => item.id !== res.id),
+                    ...prevState.filter(item => item.id !== Number(id)),
                 ]))
             });
         }

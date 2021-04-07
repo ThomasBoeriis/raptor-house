@@ -16,13 +16,17 @@ import EditProduct from "./components/EditProduct";
 
 //Context
 import { getAll } from "../context/Context";
+import CreateCategory from "./components/CreateCategory";
+import Editcategory from "./components/EditCategory";
 
 const AppCms = () => {
 
     const [products, setProducts] = useState([]);
+    const [categories, setCategories] = useState([]);
 
     useEffect(() => {
         getAll("products").then(res => setProducts(res));
+        getAll("categories").then(res => setCategories(res));
     }, []);
 
     return (
@@ -30,6 +34,8 @@ const AppCms = () => {
             <NavCms />
             <main className="container p-3 bg-light" style={{ minHeight: 550 }}>
                 <Route exact path="/cms" component={HomeCms} />
+
+                {/* Prducts */}
                 <Route path="/cms/products" render={() => (
                     <ListView items={products} setState={setProducts} title="Products" />
                 )} />
@@ -41,6 +47,18 @@ const AppCms = () => {
                 <Route path="/cms/editproducts/:id" render={(props) => (
                     <EditProduct products={products} setState={setProducts} id={props.match.params.id} />
                 )} />
+
+                {/* Categories */}
+                <Route path="/cms/categories" render={() => (
+                    <ListView items={categories} setState={setCategories} title="Categories" />
+                )} />
+                <Route path="/cms/createcategories" render={() => (
+                    <CreateCategory setState={setCategories} />
+                )} />
+                <Route path="/cms/editcategories/:id" render={(props) => (
+                    <Editcategory categories={categories} setState={setCategories} id={props.match.params.id} />
+                )} />
+
             </main>
             <FooterCms />
         </>

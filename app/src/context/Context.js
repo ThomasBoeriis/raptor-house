@@ -44,7 +44,7 @@ export const del = async (endpoint, id) => {
         }
     });
 
-    return result.json();
+    return result.status;
 }
 
 export const put = async (endpoint, id, object) => {
