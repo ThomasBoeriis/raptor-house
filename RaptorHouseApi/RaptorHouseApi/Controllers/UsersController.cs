@@ -110,10 +110,15 @@ namespace RaptorHouseApi.Controllers
         [HttpGet("validate")]
         public async Task<ActionResult<User>> ValidateUser(User user)
         {
-            
+            SHA512 pw = new SHA512Managed();
+            pw.ComputeHash(Encoding.ASCII.GetBytes(user.Password));
+
+            string computedHash = BitConverter.ToString(pw.Hash).Replace("-","").ToLower();
+
+
             var dbUser = await _context.Users.SingleOrDefaultAsync(p => 
                 p.Email.ToLower() == user.Email.ToLower() &&
-                p.Password == user.Password);
+                p.Password == computedHash);
 
             if (dbUser != null)
             {

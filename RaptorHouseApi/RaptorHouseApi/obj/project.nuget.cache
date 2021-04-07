@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h3KVvqWLdDmn1OfKnU3bzpGjmwrX84V6ecj3VWtd7xVBwttA//FCMHZ2B6tnFnLOw9Gm0Eb5xj+Cyqt/B9GM2w==",
+  "dgSpecHash": "H5hwQjSAMmThO6ZXf+e639FGNV9jNen3h2GntNkIrPcjeN+uxapLf/8+degy8MRXb44+lHEzxOx6VKqfbaFQ8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\twin_\\OneDrive\\Skrivebord\\Raptor House\\RaptorHouseApi\\RaptorHouseApi\\RaptorHouseApi.csproj",
+  "projectFilePath": "C:\\Users\\twin_\\OneDrive\\Skrivebord\\Raptor House Opgave\\Raptor House\\RaptorHouseApi\\RaptorHouseApi\\RaptorHouseApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\twin_\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\twin_\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
