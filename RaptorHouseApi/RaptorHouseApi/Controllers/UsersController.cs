@@ -107,7 +107,7 @@ namespace RaptorHouseApi.Controllers
             return _context.Users.Any(e => e.Id == id);
         }
 
-        [HttpGet("validate")]
+        [HttpPost("validate")]
         public async Task<ActionResult<User>> ValidateUser(User user)
         {
             SHA512 pw = new SHA512Managed();

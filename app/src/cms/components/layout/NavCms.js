@@ -1,7 +1,14 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+
 const NavCms = () => {
+    const history = useHistory();
+
+    const handleLogout = () => {
+        localStorage.removeItem("user");
+        history.push("/");
+    }
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
@@ -17,7 +24,9 @@ const NavCms = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/cms/products">Products</Link>
                         </li>
-                        
+                        <li className="nav-item">
+                            <Link className="nav-link" to="#" onClick={handleLogout}>Logout</Link>
+                        </li>
                     </ul>
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
