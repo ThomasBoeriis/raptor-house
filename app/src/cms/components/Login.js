@@ -1,21 +1,21 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import './login.css';
 
-import {post} from "./../../context/Context";
+import { post } from "./../../context/Context";
 
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
     const history = useHistory();
 
-    const [user,setUser] = useState();
+    const [user, setUser] = useState();
 
     const handleChange = (event) => {
         event.persist();
 
         setUser(prevState => ({
             ...prevState,
-            [event.target.name] : event.target.value
+            [event.target.name]: event.target.value
         }));
     }
 
@@ -23,9 +23,13 @@ const Login = () => {
         event.preventDefault();
         console.log(user);
 
-        post("users/validate",user).then(res => {
-            localStorage.setItem("user",JSON.stringify(res));
-            history.push("/cms");
+        post("users/validate", user).then(res => {
+            if (res?.id) {
+                localStorage.setItem("user", JSON.stringify(res));
+                history.push("/cms");
+            }else{
+                //vis fejl besked
+            }
         });
     }
 
