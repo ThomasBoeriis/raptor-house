@@ -27,18 +27,22 @@ const NavCms = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/cms/categories">Categories</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/cms/contacts">Contacts</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/cms/homes">Homes</Link>
-                        </li>
+                      
                         <li className="nav-item">
                             <Link className="nav-link" to="/cms/messages">Messages</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/cms/sliders">Sliders</Link>
                         </li>
+                       
+
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/cms/contacts">Contacts</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/cms/homes">Homes</Link>
+                        </li>
+
                         <li className="nav-item">
                             <Link className="nav-link" to="#" onClick={handleLogout}>Logout</Link>
                         </li>

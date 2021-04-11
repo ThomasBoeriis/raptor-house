@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\twin_\\OneDrive\\Skrivebord\\Raptor House Opgave\\Raptor House\\RaptorHouseApi\\RaptorHouseApi\\RaptorHouseApi.csproj": {}
+    "H:\\Git\\Education\\raptor-house\\RaptorHouseApi\\RaptorHouseApi\\RaptorHouseApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\twin_\\OneDrive\\Skrivebord\\Raptor House Opgave\\Raptor House\\RaptorHouseApi\\RaptorHouseApi\\RaptorHouseApi.csproj": {
+    "H:\\Git\\Education\\raptor-house\\RaptorHouseApi\\RaptorHouseApi\\RaptorHouseApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\twin_\\OneDrive\\Skrivebord\\Raptor House Opgave\\Raptor House\\RaptorHouseApi\\RaptorHouseApi\\RaptorHouseApi.csproj",
+        "projectUniqueName": "H:\\Git\\Education\\raptor-house\\RaptorHouseApi\\RaptorHouseApi\\RaptorHouseApi.csproj",
         "projectName": "RaptorHouseApi",
-        "projectPath": "C:\\Users\\twin_\\OneDrive\\Skrivebord\\Raptor House Opgave\\Raptor House\\RaptorHouseApi\\RaptorHouseApi\\RaptorHouseApi.csproj",
+        "projectPath": "H:\\Git\\Education\\raptor-house\\RaptorHouseApi\\RaptorHouseApi\\RaptorHouseApi.csproj",
         "packagesPath": "C:\\Users\\twin_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\twin_\\OneDrive\\Skrivebord\\Raptor House Opgave\\Raptor House\\RaptorHouseApi\\RaptorHouseApi\\obj\\",
+        "outputPath": "H:\\Git\\Education\\raptor-house\\RaptorHouseApi\\RaptorHouseApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\twin_\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/umbracoprereleases/api/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {

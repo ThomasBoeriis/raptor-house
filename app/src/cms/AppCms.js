@@ -11,22 +11,37 @@ import { Route } from "react-router-dom";
 //components
 import HomeCms from "./components/HomeCms";
 import CreateProduct from "./components/CreateProduct";
-import ListView from "./components/ListView";
 import EditProduct from "./components/EditProduct";
+import ListView from "./components/ListView";
+
+import CreateCategory from "./components/CreateCategory";
+import Editcategory from "./components/EditCategory";
+
+import CreateSlider from "./components/sliders/CreateSlider";
+import EditSlider from "./components/sliders/EditSlider";
+
+import CreateMessage from "./components/messages/CreateMessage";
+import EdditMessage from "./components/messages/EditMessage";
+
 
 //Context
 import { getAll } from "../context/Context";
-import CreateCategory from "./components/CreateCategory";
-import Editcategory from "./components/EditCategory";
+
+
 
 const AppCms = () => {
 
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
+    const [sliders, setSliders] = useState([]);
+    const [messages, setMessages] = useState([]);
+
 
     useEffect(() => {
         getAll("products").then(res => setProducts(res));
         getAll("categories").then(res => setCategories(res));
+        getAll("sliders").then(res => setSliders(res));
+        getAll("messages").then(res => setMessages(res));
     }, []);
 
     return (
@@ -58,6 +73,32 @@ const AppCms = () => {
                 <Route path="/cms/editcategories/:id" render={(props) => (
                     <Editcategory categories={categories} setState={setCategories} id={props.match.params.id} />
                 )} />
+
+
+                {/* Sliders */}
+                <Route path="/cms/sliders" render={() => (
+                    <ListView items={sliders} setState={setSliders} title="Sliders" />
+                )} />
+                <Route path="/cms/createsliders" render={() => (
+                    <CreateSlider setState={setSliders} />
+                )} />
+                <Route path="/cms/editsliders/:id" render={(props) => (
+                    <EditSlider items={sliders} setState={setSliders} id={props.match.params.id} />
+                )} />
+
+
+                {/* Messages */}
+                <Route path="/cms/messages" render={() => (
+                    <ListView items={messages} setState={setMessages} title="Messages" />
+                )} />
+                <Route path="/cms/createmessages" render={() => (
+                    <CreateMessage setState={setMessages} />
+                )} />
+                <Route path="/cms/editmessages/:id" render={(props) => (
+                    <EdditMessage items={messages} setState={setMessages} id={props.match.params.id} />
+                )} />
+
+
 
             </main>
             <FooterCms />

@@ -97,7 +97,7 @@ namespace RaptorHouseApi.Controllers
             _context.Slider.Remove(slider);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(slider);
         }
 
         private bool SliderExists(int id)

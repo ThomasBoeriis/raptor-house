@@ -97,7 +97,7 @@ namespace RaptorHouseApi.Controllers
             _context.Contact.Remove(contact);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(contact);
         }
 
         private bool ContactExists(int id)

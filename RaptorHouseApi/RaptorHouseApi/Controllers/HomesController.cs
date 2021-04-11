@@ -97,7 +97,7 @@ namespace RaptorHouseApi.Controllers
             _context.Home.Remove(home);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(home);
         }
 
         private bool HomeExists(int id)

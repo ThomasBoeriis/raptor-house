@@ -97,7 +97,7 @@ namespace RaptorHouseApi.Controllers
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(product);
         }
 
         private bool ProductExists(int id)

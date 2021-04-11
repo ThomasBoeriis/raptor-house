@@ -40,7 +40,11 @@ const ListView = ({ items, title, setState }) => {
                         items?.map(item => (
                             <tr key={item.id}>
                                 <td>{item.id}</td>
-                                <td>{item.title}</td>
+                                <td>
+                                    {item?.title != null ? item.title : ""}
+                                    {item?.alt != null ? item.alt : ""}
+                                    {item?.subject != null ? item.subject : ""}
+                                </td>
                                 <td className="text-end">
                                     <Link className="mx-2" to={`/cms/edit${title?.toLowerCase()}/${item?.id}`}><FaEdit /></Link>
                                     <Link className="mx-2" to="#" onClick={handleDelete} id={item.id} ><FaTrash /></Link>

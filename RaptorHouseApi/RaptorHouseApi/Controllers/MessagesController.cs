@@ -97,7 +97,7 @@ namespace RaptorHouseApi.Controllers
             _context.Messages.Remove(message);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(message);
         }
 
         private bool MessageExists(int id)

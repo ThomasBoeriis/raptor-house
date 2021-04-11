@@ -99,7 +99,7 @@ namespace RaptorHouseApi.Controllers
             _context.Users.Remove(user);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(user);
         }
 
         private bool UserExists(int id)

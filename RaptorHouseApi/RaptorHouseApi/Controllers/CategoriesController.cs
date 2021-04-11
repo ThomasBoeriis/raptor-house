@@ -97,7 +97,7 @@ namespace RaptorHouseApi.Controllers
             _context.Categories.Remove(category);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(category);
         }
 
         private bool CategoryExists(int id)
