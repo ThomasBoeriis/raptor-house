@@ -7,9 +7,9 @@ const Slider = (props) => {
         <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
                 {
-                   props?.images?.map((image, index) => (
-                    <div key={image?.id} className={`carousel-item ${index === 0 ? "active" : ""}`}>
-                        <img src={image.url} className="d-block w-100" alt={image.title} />
+                   props?.images?.map((item, index) => (
+                    <div key={item?.id} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+                        <img className="d-block w-100" alt={item.alt} src={`data:image/png;base64,${item?.image}`} />
                     </div>
                    )) 
                 }

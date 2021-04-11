@@ -21,3 +21,9 @@ nav ul li {
 .whiteBorder {
     border: 10px solid white
 }
+
+hr.line {
+    height:2px;
+    background:maroon;
+    opacity: 1;
+}

@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { getAll } from "../context/Context";
 
 const Menu = () => {
 
-    const [categories] = useState([{}, {}, {}, {},]);
+    const [categories, setCategories] = useState([]);
 
+    useEffect(() => {
+        getAll("categories").then(res => setCategories(res));
+    }, []);
     return (
 
         <section className="p-3" style={{ background: "#fff" }}>
@@ -15,8 +20,11 @@ const Menu = () => {
                             categories?.map(category => (
                                 <div className="col-6">
                                     <div className="p-3" style={{ marginBottom: 30, backgroundColor: "maroon" }}>
-                                        <img alt={category?.title} src="https://picsum.photos/250/250" className="img-fluid w-100 d-block" />
-                                        <p className="text-center text-white fw-bold py-1 m-0">category?.title</p>
+                                        
+                                        <Link to={"/menu/"+category.id} className="d-block ratio ratio-4x3">
+                                            <img alt={category?.title} src={`data:image/png;base64,${category?.image}`} className="img-fluid w-100 d-block" />
+                                        </Link>
+                                        <p className="text-center text-white fw-bold py-1 m-0">{category?.title}</p>
                                     </div>
                                 </div>
                             ))

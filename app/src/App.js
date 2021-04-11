@@ -9,6 +9,7 @@ import Menu from './components/Menu';
 import Profile from './components/Profile';
 import Contact from './components/Contact';
 import Map from './components/Map';
+import MenuItem from './components/MenuItem';
 
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
         <main className="container py-3" style={{ backgroundColor: "#dbbd8b", minHeight: 600 }}>
           <Route exact path="/" component={Home} />
 
-          <Route path="/menu" component={Menu} />
+          <Route path="/menu/:id" component={MenuItem} />
+          <Route exact path="/menu" component={Menu} />
+          
           <Route path="/profile" component={Profile} />
           <Route path="/contact" component={Contact} />
           <Route path="/map" component={Map} />
